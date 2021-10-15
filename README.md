@@ -1,5 +1,10 @@
 # di_demo
 
+Create Android/iOS dependency 
+```
+flutter create .
+```
+
 Intall dependency 
 ```
 flutter pub get
