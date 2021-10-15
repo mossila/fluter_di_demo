@@ -1,4 +1,4 @@
-# di_demo∂d
+# di_demo
 
 A new Flutter project.
 
