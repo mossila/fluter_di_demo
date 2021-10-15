@@ -1,6 +1,19 @@
 # di_demo
 
-A new Flutter project.
+Intall dependency 
+```
+flutter pub get
+```
+
+Start code generator 
+```
+flutter pub run  build_runner watch  --delete-conflicting-outputs
+```
+
+Clean the generated code 
+```
+flutter pub run  build_runner clean  --delete-conflicting-outputs
+```
 
 ## Getting Started
 
