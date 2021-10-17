@@ -20,6 +20,33 @@ Clean the generated code
 flutter pub run  build_runner clean  --delete-conflicting-outputs
 ```
 
+Install socket server dependency
+```
+cd server && yarn
+```
+or
+```
+cd server && npm i
+```
+
+Run socket server `make sure your path is in /server directory`
+```
+nodemon
+```
+if nodemon not exist install via `yarn global add nodemon` or `npm i -g nodemon`
+
+Get your ip address for allow socket CORS blocked
+if using mac
+```
+if=`netstat -nr | awk '{ if ($1 ~/default/) { print $6} }'`
+ifconfig ${if} | awk '{ if ($1 ~/inet/) { print $2} }'
+```
+see also `192.168.*.**`
+and edit within [/lib/scene/counter_page/repository/dev_constant_repository.dart](/lib/scene/counter_page/repository/dev_constant_repository.dart)
+
+When run flutter success
+Get your client IP:Port to add in [server/src/app.js](server/src/app.js) in `io.origins([...here])`
+
 ## Getting Started
 
 This project is a starting point for a Flutter application.
