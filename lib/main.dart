@@ -3,8 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:di_demo/scene/counter_page/widget/counter_page_main.dart';
 
 void main() {
-
-  configureDependencies(Env.prod);
+  configureDependencies(Env.dev);
   runApp(const MyApp());
 }
 

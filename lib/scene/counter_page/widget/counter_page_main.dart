@@ -1,5 +1,6 @@
 import 'package:di_demo/scene/counter_page/bloc/count_change_bloc.dart';
 import 'package:di_demo/inject/inject.dart';
+import 'package:di_demo/scene/counter_page/bloc/sale_bloc.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:provider/provider.dart';
 
@@ -11,9 +12,17 @@ class CounterPageMain extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     const counterPage = CounterPage();
-    return Provider<CounterBloc>(
-      create: (context) => getIt<CounterBloc>(),
-      dispose:(context, bloc) => bloc.dispose(),
+    return MultiProvider(
+      providers: [
+        Provider<CounterBloc>(
+          create: (context) => getIt<CounterBloc>(),
+          dispose: (context, bloc) => bloc.dispose(),
+        ),
+        Provider<SaleBloc>(
+          create: (context) => getIt<SaleBloc>(),
+          dispose: (context, bloc) => bloc.dispose(),
+        ),
+      ],
       child: counterPage,
     );
   }
