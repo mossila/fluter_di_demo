@@ -1,0 +1,60 @@
+{
+  "name": "nodejs-es6-template",
+  "version": "1.0.0",
+  "description": "Node.js es6 starter template",
+  "main": "src/index.js",
+  "author": {
+    "name": "gcoderbh",
+    "url": "https://github.com/gcoderbh/nodejs-es6-starter-template.git"
+  },
+  "scripts": {
+    "build": "rimraf dist/ && babel src --out-dir dist --copy-files",
+    "start": "npm run build && node dist/index.js",
+    "test": "jest --coverage "
+  },
+  "keywords": [
+    "nodejs",
+    "javascript",
+    "es6",
+    "nodemon",
+    "babel",
+    "jest"
+  ],
+  "license": "MIT",
+  "jest": {
+    "reporters": [
+      "default",
+      [
+        "jest-html-reporters",
+        {
+          "publicPath": "./test-report",
+          "filename": "index.html",
+          "expand": true
+        }
+      ]
+    ]
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.12.1",
+    "@babel/core": "^7.12.3",
+    "@babel/plugin-transform-regenerator": "^7.12.1",
+    "@babel/preset-env": "^7.12.1",
+    "eslint": "^7.11.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-config-prettier": "^6.13.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-prettier": "^3.1.4",
+    "jest": "^26.6.0",
+    "jest-html-reporters": "^2.1.0",
+    "nodemon": "^2.0.6",
+    "prettier": "^2.1.2",
+    "rimraf": "^3.0.2",
+    "supertest": "^5.0.0"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "socket.io": "2.4.0",
+    "underscore": "^1.13.1"
+  }
+}
