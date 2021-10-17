@@ -42,10 +42,10 @@ if=`netstat -nr | awk '{ if ($1 ~/default/) { print $6} }'`
 ifconfig ${if} | awk '{ if ($1 ~/inet/) { print $2} }'
 ```
 see also `192.168.*.**`
-and edit within `/lib/scene/counter_page/repository/dev_constant_repository.dart`
+and edit within [/lib/scene/counter_page/repository/dev_constant_repository.dart](/lib/scene/counter_page/repository/dev_constant_repository.dart)
 
 When run flutter success
-Get your client IP:Port to add in `server/src/app.js` in `io.origins([...here])`
+Get your client IP:Port to add in [server/src/app.js](server/src/app.js) in `io.origins([...here])`
 
 ## Getting Started
 
